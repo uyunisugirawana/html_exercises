@@ -1,0 +1,137 @@
+/* General Reset and Body Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f8fa; /* Light blue/gray background */
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Header Styling --- */
+.header {
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #1a202c;
+    margin-bottom: 5px;
+}
+
+.header p {
+    font-size: 1rem;
+    color: #4a5568;
+}
+
+/* --- Card Grid Layout (Responsive) --- */
+.card-grid {
+    display: grid;
+    /* Defines a responsive layout: 
+       On small screens (min-width: 0), 1 column. 
+       On medium screens (approx 768px), 2 columns.
+       On large screens (approx 1024px), 3 columns.
+    */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* --- Card Styling --- */
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-5px); /* Lift the card */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+}
+
+/* Image */
+.card-image-box {
+    height: 180px; /* Fixed height for consistent images */
+    overflow: hidden;
+}
+
+.card-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the box without distortion */
+}
+
+/* Content */
+.card-content {
+    padding: 20px;
+}
+
+.card-content h2 {
+    font-size: 1.25rem;
+    color: #1a202c;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: #718096;
+    margin-bottom: 20px;
+    height: 40px; /* Fixed height for summary lines */
+    overflow: hidden;
+}
+
+/* --- Tags Styling --- */
+.tags {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 8px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Specific Tag Colors (Based on the image) */
+.tag-blue {
+    background-color: #e3f2fd; /* Very light blue */
+    color: #2196f3; /* Medium blue text */
+}
+
+.tag-green {
+    background-color: #e8f5e9; /* Very light green */
+    color: #4caf50; /* Medium green text */
+}
+
+
+/* --- Button Styling --- */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #2b6cb0; /* Primary blue color */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #4299e1; /* Lighter blue on hover */
+}
